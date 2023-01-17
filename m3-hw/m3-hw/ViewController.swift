@@ -12,30 +12,55 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
+    var timeFormatter = DateFormatter()
+    var dateFormatter = DateFormatter()
+    var todaysDate = Date()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
+        timeFormatter.dateFormat = "HH:mm:ss a"
+        timeFormatter.amSymbol = "AM"
+        timeFormatter.pmSymbol = "PM"
+        
         loadTodaysDate()
-        loadCurrentTime()
+        let currentTime = loadCurrentTime()
+        loadBackground(currentTime: currentTime)
+        
+        
+        Timer.scheduledTimer(timeInterval: 1, target:self, selector: #selector(updateClock), userInfo:nil, repeats: true)
     }
     
     func loadTodaysDate() {
-        let todaysDate = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE, MMM d, yyyy"
         let todaysDateFormatted = dateFormatter.string(from: todaysDate)
         dateLabel.text = "\(todaysDateFormatted)"
     }
     
-    func loadCurrentTime() {
-        let todaysDate = Date()
-        let timeFormatter = DateFormatter()
-        timeFormatter.dateFormat = "HH:mm:ss"
+    func loadCurrentTime() -> String{
         let timeString = timeFormatter.string(from: todaysDate)
-        print("current time is ")
-        print(timeString)
         timeLabel.text = "\(timeString)"
+        return timeString
+    }
+    
+    @objc func updateClock() {
+        let now = Date()
+        let currentTime = timeFormatter.string(from: now)
+        timeLabel.text = "\(currentTime)"
+    }
+    
+    func loadBackground(currentTime: String) {
+        print("time param is ")
+        print(currentTime)
+        if (currentTime.contains("PM")) {
+            print("IT IS PM")
+            
+        } else {
+            print("IT IS AM")
+        }
     }
 }
 
