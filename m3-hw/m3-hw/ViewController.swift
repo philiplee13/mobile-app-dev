@@ -50,6 +50,7 @@ class ViewController: UIViewController {
         let now = Date()
         let currentTime = timeFormatter.string(from: now)
         timeLabel.text = "\(currentTime)"
+        loadBackground(currentTime: currentTime)
     }
     
     func loadBackground(currentTime: String) {
@@ -57,10 +58,15 @@ class ViewController: UIViewController {
         print(currentTime)
         if (currentTime.contains("PM")) {
             print("IT IS PM")
-            
+            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "nighttime-background")!)
         } else {
             print("IT IS AM")
+            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "daytime-background")!)
         }
+    }
+    
+    func loadDatePicker() {
+        
     }
 }
 
