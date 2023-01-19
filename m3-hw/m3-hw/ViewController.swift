@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     var timeFormatter = DateFormatter()
     var dateFormatter = DateFormatter()
     var todaysDate = Date()
-    
+    @IBOutlet weak var timer: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +28,10 @@ class ViewController: UIViewController {
         loadTodaysDate()
         let currentTime = loadCurrentTime()
         loadBackground(currentTime: currentTime)
-        
-        
+        loadTimer()
         Timer.scheduledTimer(timeInterval: 1, target:self, selector: #selector(updateClock), userInfo:nil, repeats: true)
     }
+    
     
     func loadTodaysDate() {
         let dateFormatter = DateFormatter()
@@ -54,19 +54,21 @@ class ViewController: UIViewController {
     }
     
     func loadBackground(currentTime: String) {
-        print("time param is ")
-        print(currentTime)
         if (currentTime.contains("PM")) {
-            print("IT IS PM")
             self.view.backgroundColor = UIColor(patternImage: UIImage(named: "nighttime-background")!)
         } else {
-            print("IT IS AM")
-            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "daytime-background")!)
+            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "daylight-background")!)
         }
     }
     
-    func loadDatePicker() {
-        
+    func loadTimer() {
+        timer.frame = CGRect(x: 200, y: 300,
+                                  width: self.view.frame.width, height: 100)
+        timer.datePickerMode = UIDatePicker.Mode.countDownTimer
+        timer.preferredDatePickerStyle = .wheels
+        timer.minuteInterval = 5
+        timer.countDownDuration = 4500
+        self.view.addSubview(timer)
     }
 }
 
