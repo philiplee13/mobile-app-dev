@@ -93,7 +93,6 @@ class ViewController: UIViewController {
     }
     
     func stopTimer() {
-        timerCountDown.invalidate()
         print("time left is")
         print(timeLeft!)
         if timeLeft! <= 0 {
