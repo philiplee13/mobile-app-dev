@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		326AC74C297A224400170C4E /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 326AC74B297A224400170C4E /* music.mp3 */; };
 		3277DEA329771707004B4AD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3277DEA229771707004B4AD7 /* AppDelegate.swift */; };
 		3277DEA529771707004B4AD7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3277DEA429771707004B4AD7 /* SceneDelegate.swift */; };
 		3277DEA729771707004B4AD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3277DEA629771707004B4AD7 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		326AC74B297A224400170C4E /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = music.mp3; path = Assets.xcassets/music.mp3; sourceTree = "<group>"; };
 		3277DE9F29771707004B4AD7 /* m3-hw.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "m3-hw.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3277DEA229771707004B4AD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3277DEA429771707004B4AD7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				3277DEAB29771708004B4AD7 /* Assets.xcassets */,
 				3277DEAD29771708004B4AD7 /* LaunchScreen.storyboard */,
 				3277DEB029771708004B4AD7 /* Info.plist */,
+				326AC74B297A224400170C4E /* music.mp3 */,
 			);
 			path = "m3-hw";
 			sourceTree = "<group>";
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				326AC74C297A224400170C4E /* music.mp3 in Resources */,
 				3277DEAF29771708004B4AD7 /* LaunchScreen.storyboard in Resources */,
 				3277DEAC29771708004B4AD7 /* Assets.xcassets in Resources */,
 				3277DEAA29771707004B4AD7 /* Main.storyboard in Resources */,

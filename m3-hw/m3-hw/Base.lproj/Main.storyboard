@@ -38,7 +38,11 @@
                                 <rect key="frame" x="123" y="495" width="169" height="97"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Start Time / Stop Music"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Start Timer"/>
+                                <connections>
+                                    <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hPK-4r-9fd"/>
+                                    <action selector="stopMusic:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Osz-9N-mFP"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Time Remaining" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2q-uV-nvy">
                                 <rect key="frame" x="97" y="655" width="221" height="51"/>
@@ -53,8 +57,10 @@
                     </view>
                     <connections>
                         <outlet property="dateLabel" destination="bXu-yr-FWQ" id="L3s-4E-vYz"/>
+                        <outlet property="messageLabel" destination="W2q-uV-nvy" id="SEo-uy-24y"/>
                         <outlet property="timeLabel" destination="WoN-uD-KxG" id="ZQp-Zb-oX5"/>
                         <outlet property="timer" destination="NCP-Sk-gRl" id="iKh-vA-mFF"/>
+                        <outlet property="timerButton" destination="b4g-Ci-hrG" id="ldO-dv-aqn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
