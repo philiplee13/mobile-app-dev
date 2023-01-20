@@ -66,14 +66,32 @@ class ViewController: UIViewController {
     func loadBackground(currentTime: String) {
         print("in load background function")
         if (currentTime.contains("PM")) {
-            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "nighttime-background")!)
+            let background = UIImage(named: "nighttime-background")
+
+                    var imageView : UIImageView!
+                    imageView = UIImageView(frame: view.bounds)
+            imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+                    imageView.clipsToBounds = true
+                    imageView.image = background
+                    imageView.center = view.center
+                    view.addSubview(imageView)
+                    self.view.sendSubviewToBack(imageView)
             dateLabel.textColor = UIColor.white
             timeLabel.textColor = UIColor.white
             messageLabel.textColor = UIColor.white
             
             
         } else if (currentTime.contains("AM")) {
-            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "daylight-background")!)
+            let background = UIImage(named: "daylight-background")
+
+                    var imageView : UIImageView!
+                    imageView = UIImageView(frame: view.bounds)
+            imageView.contentMode =  UIView.ContentMode.scaleAspectFill
+                    imageView.clipsToBounds = true
+                    imageView.image = background
+                    imageView.center = view.center
+                    view.addSubview(imageView)
+                    self.view.sendSubviewToBack(imageView)
             dateLabel.textColor = UIColor.black
             timeLabel.textColor = UIColor.black
             messageLabel.textColor = UIColor.black
@@ -100,7 +118,7 @@ class ViewController: UIViewController {
         timerCountDown = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(startCountDown), userInfo: nil, repeats: true)
         }
     }
-    
+    // Once timer runs out - change button text and play music
     func stopTimer() {
         print("time left is")
         print(timeLeft!)
