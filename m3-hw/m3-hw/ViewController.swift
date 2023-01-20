@@ -64,7 +64,6 @@ class ViewController: UIViewController {
     
     // Load the background based on the time
     func loadBackground(currentTime: String) {
-        print("in load background function")
         if (currentTime.contains("PM")) {
             let background = UIImage(named: "nighttime-background")
 
@@ -120,8 +119,6 @@ class ViewController: UIViewController {
     }
     // Once timer runs out - change button text and play music
     func stopTimer() {
-        print("time left is")
-        print(timeLeft!)
         if timeLeft! <= 0 {
             timerButton.setTitle("Stop Music", for: .normal)
             playSound()
@@ -161,7 +158,6 @@ class ViewController: UIViewController {
             guard let player = player else { return }
 
             player.play()
-            print("reached end of play function")
 
         } catch let error {
             print(error.localizedDescription)
