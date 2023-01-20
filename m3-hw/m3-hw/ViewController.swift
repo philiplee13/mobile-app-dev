@@ -64,10 +64,19 @@ class ViewController: UIViewController {
     
     // Load the background based on the time
     func loadBackground(currentTime: String) {
+        print("in load background function")
         if (currentTime.contains("PM")) {
             self.view.backgroundColor = UIColor(patternImage: UIImage(named: "nighttime-background")!)
-        } else {
+            dateLabel.textColor = UIColor.white
+            timeLabel.textColor = UIColor.white
+            messageLabel.textColor = UIColor.white
+            
+            
+        } else if (currentTime.contains("AM")) {
             self.view.backgroundColor = UIColor(patternImage: UIImage(named: "daylight-background")!)
+            dateLabel.textColor = UIColor.black
+            timeLabel.textColor = UIColor.black
+            messageLabel.textColor = UIColor.black
         }
     }
     

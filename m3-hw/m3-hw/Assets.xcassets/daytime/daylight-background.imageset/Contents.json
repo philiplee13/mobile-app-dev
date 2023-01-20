@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "daylight-background.jpeg",
+      "filename" : "daytime.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "daylight-background@2x.jpeg",
+      "filename" : "daytime@2x.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "daylight-background@3x.jpeg",
+      "filename" : "daytime@3x.jpeg",
       "idiom" : "universal",
       "scale" : "3x"
     }
