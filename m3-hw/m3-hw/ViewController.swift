@@ -78,6 +78,7 @@ class ViewController: UIViewController {
             dateLabel.textColor = UIColor.white
             timeLabel.textColor = UIColor.white
             messageLabel.textColor = UIColor.white
+            timer.setValue(UIColor.white, forKeyPath: "textColor")
             
             
         } else if (currentTime.contains("AM")) {
