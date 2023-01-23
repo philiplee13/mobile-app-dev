@@ -54,11 +54,7 @@ struct AdventureLogic {
     
     func getNextPrompt() -> Array<Any> {
         var optionArray = Array<Any>()
-        print("optionIndex is")
-        print(optionIndex)
-        print(options.count - 1)
         if optionIndex == options.count - 1 {
-            print("index and count are equal")
             optionArray.append(goodResult)
             return optionArray
         }
