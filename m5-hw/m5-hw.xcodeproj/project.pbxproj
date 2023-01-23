@@ -13,6 +13,8 @@
 		32F70FA2297EE20300290A7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32F70FA0297EE20300290A7C /* Main.storyboard */; };
 		32F70FA4297EE20500290A7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32F70FA3297EE20500290A7C /* Assets.xcassets */; };
 		32F70FA7297EE20500290A7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32F70FA5297EE20500290A7C /* LaunchScreen.storyboard */; };
+		32F70FAF297EF8C800290A7C /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F70FAE297EF8C800290A7C /* Options.swift */; };
+		32F70FB3297EFA5400290A7C /* AdventureLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F70FB2297EFA5400290A7C /* AdventureLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		32F70FA3297EE20500290A7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32F70FA6297EE20500290A7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32F70FA8297EE20500290A7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32F70FAE297EF8C800290A7C /* Options.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
+		32F70FB2297EFA5400290A7C /* AdventureLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdventureLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,33 @@
 		32F70F99297EE20300290A7C /* m5-hw */ = {
 			isa = PBXGroup;
 			children = (
+				32F70FB5297F0A2500290A7C /* View */,
+				32F70FB4297F0A1A00290A7C /* Model */,
 				32F70F9A297EE20300290A7C /* AppDelegate.swift */,
 				32F70F9C297EE20300290A7C /* SceneDelegate.swift */,
-				32F70F9E297EE20300290A7C /* ViewController.swift */,
 				32F70FA0297EE20300290A7C /* Main.storyboard */,
 				32F70FA3297EE20500290A7C /* Assets.xcassets */,
 				32F70FA5297EE20500290A7C /* LaunchScreen.storyboard */,
 				32F70FA8297EE20500290A7C /* Info.plist */,
 			);
 			path = "m5-hw";
+			sourceTree = "<group>";
+		};
+		32F70FB4297F0A1A00290A7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				32F70FAE297EF8C800290A7C /* Options.swift */,
+				32F70FB2297EFA5400290A7C /* AdventureLogic.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		32F70FB5297F0A2500290A7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				32F70F9E297EE20300290A7C /* ViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +160,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32F70FB3297EFA5400290A7C /* AdventureLogic.swift in Sources */,
+				32F70FAF297EF8C800290A7C /* Options.swift in Sources */,
 				32F70F9F297EE20300290A7C /* ViewController.swift in Sources */,
 				32F70F9B297EE20300290A7C /* AppDelegate.swift in Sources */,
 				32F70F9D297EE20300290A7C /* SceneDelegate.swift in Sources */,

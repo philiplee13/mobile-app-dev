@@ -37,7 +37,7 @@
                                             <constraint firstItem="dAA-Qy-jKX" firstAttribute="centerY" secondItem="NEw-nE-q3g" secondAttribute="centerY" id="br1-Rt-hG1"/>
                                         </constraints>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Prompt" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B6C-bJ-iJi">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Prompt" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B6C-bJ-iJi" userLabel="promptText">
                                         <rect key="frame" x="0.0" y="271" width="368" height="246"/>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
@@ -59,6 +59,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="updateGoodPath:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xpw-gl-8Mm"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMQ-uJ-Ki3">
                                                 <rect key="frame" x="0.0" y="130.66666666666663" width="368" height="115.33333333333331"/>
@@ -73,6 +76,9 @@
                                                         </fragment>
                                                     </attributedString>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="updateBadPath:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UC9-ho-kdn"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -92,6 +98,11 @@
                             <constraint firstItem="VlC-ZR-IfE" firstAttribute="centerX" secondItem="IUk-7b-Imw" secondAttribute="centerX" id="tqm-Rs-yj3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="optionA" destination="vsE-72-n0w" id="zau-mB-zbR"/>
+                        <outlet property="optionB" destination="nMQ-uJ-Ki3" id="ILd-BG-fKx"/>
+                        <outlet property="promptText" destination="B6C-bJ-iJi" id="f1J-wJ-80A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
