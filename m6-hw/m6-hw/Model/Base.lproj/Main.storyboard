@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aj9-Kp-gjc" userLabel="currency-stack">
-                                <rect key="frame" x="104.00000000000001" y="260" width="220.33333333333337" height="406"/>
+                                <rect key="frame" x="45" y="260" width="338" height="406"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter USD:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IeF-Hh-75H">
                                         <rect key="frame" x="0.0" y="0.0" width="102.66666666666667" height="406"/>
@@ -30,6 +30,14 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIe-QL-dT9">
+                                        <rect key="frame" x="235.33333333333329" y="0.0" width="102.66666666666666" height="406"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Convert"/>
+                                        <connections>
+                                            <action selector="navigateToConvertedView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AQT-jR-rML"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="zz2-9v-dPv" userLabel="currency-options-stack">
@@ -118,15 +126,50 @@
                             <constraint firstItem="zz2-9v-dPv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qyP-uY-bPr"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="amountToConvert" destination="XHw-x4-RSU" id="NVB-ge-LRN"/>
+                        <outlet property="convertButton" destination="bIe-QL-dT9" id="9A1-XS-7Ph"/>
+                        <segue destination="oiN-fB-PPi" kind="presentation" identifier="toConvertedCurrency" id="Ham-Zf-VX5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="84"/>
         </scene>
+        <!--Currency Converted View Controller-->
+        <scene sceneID="UNe-yg-Qzb">
+            <objects>
+                <viewController id="oiN-fB-PPi" customClass="CurrencyConvertedViewController" customModule="m6_hw" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gf7-G3-B7D">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="872"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Original Amount" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iy5-Ka-85s">
+                                <rect key="frame" x="71" y="97" width="286" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="c4g-CF-oEM"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="amountLabel" destination="Iy5-Ka-85s" id="qOr-9K-Iq6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pTu-X3-dcp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1006.5420560747663" y="83.585313174946009"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
